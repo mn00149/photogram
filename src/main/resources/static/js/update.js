@@ -12,6 +12,8 @@ function update(userId) {
 		dataType: "json"
 	}).done(res => {
 		console.log("update성공", res)
+		alert("회원정보가 성고적으로 수정 되었습니다")
+		location.href = `/user/${userId}`;
 	}).fail(err => {
 		console.log("update실패", err)
 	})
