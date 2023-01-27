@@ -13,7 +13,7 @@ function update(userId, event) {
 		dataType: "json"
 	}).done(res => {
 		console.log("update성공", res)
-		alert("회원정보가 성고적으로 수정 되었습니다")
+		alert("회원정보가 성공적으로 수정 되었습니다")
 		location.href = `/user/${userId}`;
 	}).fail(error => {// HttpStatus 코드가 200번대가 아닐때 실행
 		console.log("update실패", error)
