@@ -26,7 +26,7 @@ public class UserService {
 				User userEntity = userRepository.findById(id).orElseThrow(() -> { return new CustomValidationApiException("찾을 수 없는 id입니다.");});
 		
 		//2.영속화된 오브젝트 수정하기
-		//2-1 password 암호화
+		//2-1 password 암호화 안하면 스프링 시큐리티가 로그인 처리를 안함
 		String rawPassword = user.getPassword();
 		String encPassword = bCryptPasswordEncoder.encode(rawPassword);
 				
